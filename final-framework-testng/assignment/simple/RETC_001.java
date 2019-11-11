@@ -25,6 +25,7 @@ public class RETC_001 {
 		driver.findElement(By.name("submit")).click();
 		Thread.sleep(2000);
 		System.out.println(driver.findElement(By.xpath("//div[@class='notification success closeable']")).getText());
+		Thread.sleep(2000);
 		Assert.assertEquals(driver.findElement(By.xpath("//div[@class='notification success closeable']")).getText(), "You have successfully registered to Real Estate. We have emailed your password to the email address you entered.");
 		driver.quit();
 		
