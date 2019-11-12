@@ -45,11 +45,25 @@ public class LoginTests {
 		Thread.sleep(1000);
 		driver.quit();
 	}
+	
+	@Test
+	public void userRegisterTest() {
+		loginPOM.clickLoginorRegisterlink();
+		loginPOM.clickRegisterTab();
+		loginPOM.sendEmail("revasharma@gmail.com");
+		loginPOM.sendFirstName("reva");
+		loginPOM.sendlastName("sharma");
+		loginPOM.clickOnRegister();
+		
+	}
+	
 	@Test
 	public void validLoginTest() {
-		loginPOM.sendUserName("admin");
-		loginPOM.sendPassword("admin@123");
+		loginPOM.clickLoginorRegisterlink();
+		loginPOM.sendUserName("revasharma@gmail.com");
+		loginPOM.sendPassword("reva123");
 		loginPOM.clickLoginBtn(); 
 		screenShot.captureScreenShot("First");
 	}
+	
 }

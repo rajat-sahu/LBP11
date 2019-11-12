@@ -11,6 +11,7 @@ import org.testng.annotations.Test;
 public class RETC_001 {
 	@Test
 	public void login() throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver","drivers/chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
