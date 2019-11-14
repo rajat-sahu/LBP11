@@ -46,24 +46,36 @@ public class LoginTests {
 		driver.quit();
 	}
 	
-	@Test
+	@Test(priority=1)
 	public void userRegisterTest() {
 		loginPOM.clickLoginorRegisterlink();
 		loginPOM.clickRegisterTab();
-		loginPOM.sendEmail("revasharma@gmail.com");
+		loginPOM.sendEmail("revasharma4@gmail.com");
 		loginPOM.sendFirstName("reva");
 		loginPOM.sendlastName("sharma");
 		loginPOM.clickOnRegister();
-		
+		screenShot.captureScreenShot("RegistartionPage");
 	}
 	
-	@Test
+	@Test(priority=2)
 	public void validLoginTest() {
 		loginPOM.clickLoginorRegisterlink();
 		loginPOM.sendUserName("revasharma@gmail.com");
-		loginPOM.sendPassword("reva123");
+		loginPOM.sendPassword("revasharma@123");
 		loginPOM.clickLoginBtn(); 
-		screenShot.captureScreenShot("First");
+		screenShot.captureScreenShot("ValidLogin");
 	}
 	
+	@Test(priority=3)
+	public void forgotPasswd() throws InterruptedException {
+		loginPOM.clickLoginorRegisterlink();
+		loginPOM.clickLoginTab();
+		Thread.sleep(5000);
+		loginPOM.clickLostPassword();
+		loginPOM.emailForLostPwd("revasharma@gmail.com");
+		loginPOM.clickRestPwdBtn();
+		loginPOM.errorMsg();
+		screenShot.captureScreenShot("ErrorPage");
+		
+	}
 }

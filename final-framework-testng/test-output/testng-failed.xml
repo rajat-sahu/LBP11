@@ -8,7 +8,7 @@
           <include name="setUpBeforeClass"/>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="validLoginTest"/>
+          <include name="forgotPasswd"/>
         </methods>
       </class> <!-- com.training.sanity.tests.LoginTests -->
     </classes>
