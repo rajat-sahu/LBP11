@@ -54,7 +54,7 @@ public class LoginTests {
 		loginPOM.sendFirstName("reva");
 		loginPOM.sendlastName("sharma");
 		loginPOM.clickOnRegister();
-		screenShot.captureScreenShot("RegistartionPage");
+		screenShot.captureScreenShot("/RegistartionPage");
 	}
 	
 	@Test(priority=2)
@@ -63,7 +63,7 @@ public class LoginTests {
 		loginPOM.sendUserName("revasharma@gmail.com");
 		loginPOM.sendPassword("revasharma@123");
 		loginPOM.clickLoginBtn(); 
-		screenShot.captureScreenShot("ValidLogin");
+		screenShot.captureScreenShot("/ValidLogin");
 	}
 	
 	@Test(priority=3)
@@ -75,7 +75,7 @@ public class LoginTests {
 		loginPOM.emailForLostPwd("revasharma@gmail.com");
 		loginPOM.clickRestPwdBtn();
 		loginPOM.errorMsg();
-		screenShot.captureScreenShot("ErrorPage");
+		screenShot.captureScreenShot("/ErrorPage");
 		
 	}
 }

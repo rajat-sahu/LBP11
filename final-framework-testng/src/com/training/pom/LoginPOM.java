@@ -9,6 +9,7 @@ import org.testng.Assert;
 
 public class LoginPOM {
 	private WebDriver driver; 
+	//WebDriver driver; 
 	
 	public LoginPOM(WebDriver driver) {
 		this.driver = driver; 
